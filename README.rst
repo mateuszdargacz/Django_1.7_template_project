@@ -1,33 +1,16 @@
 ========================
-django-twoscoops-project
+Django template project
 ========================
-
-A project template for Django 1.6 (with a tag for Django 1.5).
+Based on
+* https://github.com/twoscoops/django-twoscoops-project
+A project template for Django 1.7 (with a tag for Django 1.5).
 
 To use this project follow these steps:
 
 #. Create your working environment
 #. Install Django
-#. Create the new project using the django-two-scoops template
 #. Install additional dependencies
 
-*note: these instructions show creation of a project called "icecream".  You
-should replace this name with the actual name of your project.*
-
-What about Django 1.7 (or higher)?
-==================================
-
-This project is meant to be paired with the Two Scoops of Django, which stop at 1.6. Since this is the case, we won't be upgrading this project for upcoming releases of Django.
-
-If you are looking for cutting edge Django templates, we recommend:
-
-* https://github.com/pydanny/cookiecutter-django
-* https://github.com/luzfcb/cookiecutter-django-oauth
-* https://github.com/imkevinxu/django-kevin
-
-Most of these (and many others) are powered by cookiecutter_, which is an awesome tool by Audrey Roy, who happens to be one of the co-authors of Two Scoops of Django.
-
-.. _cookiecutter: https://github.com/audreyr/cookiecutter
 
 Working Environment
 ===================
@@ -42,7 +25,7 @@ Virtualenv Only
 First, make sure you are using virtualenv (http://www.virtualenv.org). Once
 that's installed, create your virtualenv::
 
-    $ virtualenv icecream
+    $ virtualenv env
 
 You will also need to ensure that the virtualenv has the project directory
 added to the path. Adding the project directory will allow `django-admin.py` to
@@ -55,41 +38,19 @@ In Linux and Mac OSX, you can install virtualenvwrapper (http://virtualenvwrappe
 which will take care of managing your virtual environments and adding the
 project path to the `site-directory` for you::
 
-    $ mkdir icecream
-    $ mkvirtualenv -a icecream icecream-dev
-    $ cd icecream && add2virtualenv `pwd`
+    $ mkdir env
+    $ mkvirtualenv -a env env-dev
+    $ cd env && add2virtualenv `pwd`
 
 Using virtualenvwrapper with Windows
 ----------------------------------------
 
 There is a special version of virtualenvwrapper for use with Windows (https://pypi.python.org/pypi/virtualenvwrapper-win).::
 
-    > mkdir icecream
-    > mkvirtualenv icecream-dev
-    > add2virtualenv icecream
+    > mkdir env
+    > mkvirtualenv env-dev
+    > add2virtualenv env
 
-
-Installing Django
-=================
-
-To install Django in the new virtual environment, run the following command::
-
-    $ pip install django
-
-Creating your project
-=====================
-
-To create a new Django project called '**icecream**' using
-django-twoscoops-project, run the following command::
-
-    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/master.zip --extension=py,rst,html icecream_project
-
-For Django 1.5 users, we recommend::
-
-    $ django-admin.py startproject --template=https://github.com/twoscoops/django-twoscoops-project/archive/1.5.zip --extension=py,rst,html icecream_project
-
-Installation of Dependencies
-=============================
 
 Depending on where you are installing dependencies:
 
