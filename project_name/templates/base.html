@@ -51,6 +51,11 @@
 
     {% block content %}
         <p>Use this document as a way to quick start any new project.</p>
+        <a href="{% url 'test_app:main' %}">
+            <button class="btn btn-primary">
+                Navigate to TEST_APP
+            </button>
+        </a>
     {% endblock %}
 
 </div>

@@ -9,7 +9,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='base.html')),
-    url(r'^test_app/', include('project_name.test_app.urls')),
+    url(r'^test_app/', include('project_name.test_app.urls', namespace="test_app")),
 
     # Examples:
     # url(r'^$', '{{ project_name }}.views.home', name='home'),

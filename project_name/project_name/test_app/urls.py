@@ -5,13 +5,12 @@ __git__ = 'https://github.com/mateuszdargacz'
 
 
 from django.conf.urls import patterns, include, url
-from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import TemplateView
 
 urlpatterns = patterns('project_name.test_app.views',
     # Examples:
-    # url(r'^$', '{{ project_name }}.views.home', name='home'),
+    url(r'^main/?$', TemplateView.as_view(template_name="test_app/main.html"), name='main'),
     # url(r'^{{ project_name }}/', include('{{ project_name }}.foo.urls')),
 )
 
