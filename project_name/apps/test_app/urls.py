@@ -8,7 +8,7 @@ from django.conf.urls import patterns, include, url
 from django.conf import settings
 from django.views.generic import TemplateView
 
-urlpatterns = patterns('project_name.test_app.views',
+urlpatterns = patterns('apps.test_app.views',
     # Examples:
     url(r'^main/?$', TemplateView.as_view(template_name="test_app/main.html"), name='main'),
     # url(r'^{{ project_name }}/', include('{{ project_name }}.foo.urls')),

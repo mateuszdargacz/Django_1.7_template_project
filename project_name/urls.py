@@ -1,5 +1,4 @@
 from django.conf.urls import patterns, include, url
-from django.conf.urls.static import static
 from django.conf import settings
 from django.views.generic import TemplateView
 
@@ -9,14 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', TemplateView.as_view(template_name='base.html')),
-    url(r'^test_app/', include('project_name.test_app.urls', namespace="test_app")),
-
-    # Examples:
-    # url(r'^$', '{{ project_name }}.views.home', name='home'),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    # Uncomment the next line to enable the admin:
+    url(r'^test_app/', include('apps.test_app.urls', namespace="test_app")),
     url(r'^admin/', include(admin.site.urls)),
 )
 

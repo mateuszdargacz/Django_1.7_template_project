@@ -170,7 +170,7 @@ MIDDLEWARE_CLASSES = (
 
 ########## URL CONFIGURATION
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
-ROOT_URLCONF = '%s.urls' % SITE_NAME
+ROOT_URLCONF = 'urls'
 ########## END URL CONFIGURATION
 
 
@@ -192,12 +192,14 @@ DJANGO_APPS = (
 
 #3rd party apps
 THIRD_PARTY_APPS = (
+    'debug_toolbar',
     'compressor',
-    'vanilla'
+    'vanilla',
+    'django_extensions',
 )
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'project_name.test_app',
+    'apps.test_app',
 )
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
